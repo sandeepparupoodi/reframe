@@ -66,6 +66,7 @@ export default function FileUpload({ onFileSelect, currentFile }: Props) {
 
   return (
     <div
+      data-testid="file-upload-zone"
       onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
       onDragLeave={() => setDragging(false)}
       onDrop={handleDrop}
