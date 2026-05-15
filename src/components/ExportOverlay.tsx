@@ -39,11 +39,12 @@ export default function ExportOverlay({ status, progress }: Props) {
 
         {status === "exporting" && (
           <div className="w-full space-y-2">
-            <div className="h-1 w-full bg-film-100 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-film-600 rounded-full transition-all duration-300"
-                style={{ width: `${progress}%` }}
-              />
+            <div
+              data-testid="export-progress"
+              className="h-2 bg-film-100 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-film-600 transition-all duration-300"
+              style={{ width: `${progress}%` }} />
             </div>
             <p className="text-xs font-heading font-semibold text-[var(--muted)]">
               {progress}%
