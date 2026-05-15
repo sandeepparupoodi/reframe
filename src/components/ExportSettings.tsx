@@ -23,6 +23,7 @@ export default function ExportSettings({ recipe, onChange }: Props) {
         </span>
       </div>
       <input
+        data-testid="quality-slider"
         type="range"
         min={18}
         max={30}
