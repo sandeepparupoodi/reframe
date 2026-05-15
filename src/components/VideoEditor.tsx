@@ -143,10 +143,11 @@ export default function VideoEditor() {
             </div>
 
             <button
-              type="button"
-              onClick={handleExport}
-              disabled={!file || isProcessing}
-              className={cn(
+                data-testid="export-button"
+                type="button"
+                disabled={!file || status !== "idle"}
+                onClick={handleExport}
+                className={cn(
                 "w-full flex items-center justify-center gap-3 py-5 rounded-xl",
                 "font-display text-2xl tracking-widest transition-all duration-200",
                 file && !isProcessing
