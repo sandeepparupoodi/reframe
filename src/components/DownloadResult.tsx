@@ -42,8 +42,9 @@ export default function DownloadResult({ result, onReset }: Props) {
 
       <div className="flex gap-2">
         <a
-          href={result.blobUrl}
-          download={filename}
+         data-testid="download-button"
+         href={result.url}
+         download={filename} 
           className="flex-1 flex items-center justify-center gap-2 py-3 bg-film-600 hover:bg-film-700 text-white text-sm font-heading font-bold uppercase tracking-wide rounded-lg transition-all hover:scale-[1.01] active:scale-[0.99]"
         >
           <Download size={15} />
