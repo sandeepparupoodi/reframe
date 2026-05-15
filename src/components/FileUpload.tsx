@@ -65,12 +65,13 @@ export default function FileUpload({ onFileSelect, currentFile }: Props) {
   }
 
   return (
-    <div
-      onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
-      onDragLeave={() => setDragging(false)}
-      onDrop={handleDrop}
-      onClick={() => inputRef.current?.click()}
-      className={cn(
+   <div
+     data-testid="file-upload-zone"
+     onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
+     onDragLeave={() => setDragging(false)}
+     onDrop={handleDrop}
+     onClick={() => inputRef.current?.click()}
+     className={cn(
         "group flex flex-col items-center justify-center gap-4 py-12 px-6",
         "border-2 border-dashed rounded-xl cursor-pointer transition-all duration-200",
         dragging
